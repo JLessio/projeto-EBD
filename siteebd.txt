@@ -1,0 +1,103 @@
+j[Login] 
+     │
+     ▼
+[Escolhe tipo de login]
+     ├─> [Login Administrativo] 
+     │          │
+     │          ▼
+     │   [Digite usuário e senha]
+     │          │
+     │          ▼
+     │   [Validação do login]
+     │          │
+     │          ├─> [Credenciais corretas?] ── Não ──> [Exibir mensagem: "Login inválido"]
+     │          │
+     │          ▼
+     │     Sim
+     │          │
+     │          ▼
+     │   [Redireciona para painel administrativo]
+     │          │
+     │          ▼
+     │   [Menu de abas do painel administrativo]
+     │          ├─> [Relatório por classe diário] *podendo escolher a data 
+     │                     > Classes 1 (Jardim de Deus)
+     │                          Quantidade de Presenças:   
+     │                          Porcentagem de Presença:  
+     │                          Quantidade de Biblias: 
+     │                          Oferta:  
+     │                          Visitantes: 
+     │                      > Classes 2 (Corderinhos de Cristo)
+     │                          Quantidade de Presenças:   
+     │                          Porcentagem de Presença:  
+     │                          Quantidade de Biblias: 
+     │                          Oferta:  
+     │                          Visitantes:
+Gideao e midia 
+rosa de Saron 
+mensageiros da fe 
+juniores 
+
+     │                          * 5 ou 6 classes que tem na escolinha 
+     │
+     │          ├─> [Relatório geral diário] *podendo escolher a data
+     │                Porcentagem Geral de Presença de Todas as Classes: 
+     │                Quantas Presenças: 
+     │                Quantidade de Biblias: 
+     │                Oferta: 
+     │                Visitantes: 
+     │          ├─> [Turmas (Professores e Alunos)]
+     │                > Todas As Classes 
+     │                > Adicionar Turma ou Deletar 
+     │                     > Professores
+     │                            > Nomes dos Professores cadastrados 
+     │                                      > deletar 
+     │                      > Alunos 
+     │                            > nome dos alunos cadastrados 
+     │                                      > deletar 
+     │          ├─> [Aniversariantes da semana]
+nome, data de aniversário, WhatsApp. 
+     │                      >selecionar conforme o cadastro do aluno e do professor para aparecer nos aniversáriantes
+     │          └─> [Datas comemorativas do calendário]
+     │                    > Anivesário da assembleia de Deus 
+     │                    > Dia do Pastor
+     │                    > Dia da Biblia
+     │                    > Dia da Reforma Protestante 
+     │                    > Dia da Escola Biblica Dominical 
+     │                    > Dia Nacional de missões
+     │
+     └─> [Login Professor] 
+                │
+                ▼
+         [Digite usuário e senha]
+                │
+                ▼
+         [Validação do login]
+                │
+                ├─> [Credenciais corretas?] ── Não ──> [Exibir mensagem: "Login inválido"]
+                │
+                ▼
+             Sim
+                │
+                ▼
+        [Consulta ClasseID do usuário]
+                │
+                ▼
+       [Redireciona para painel da turma correspondente]
+                │
+                ▼
+      [Menu de abas do painel do professor]
+                ├─> [Relatório por classe diário] (somente da própria turma)
+                ├─> [Turma (Professores e Alunos da Turma)]
+                ├─> [Aniversariantes da semana] (somente da própria turma)
+                └─> [Datas comemorativas do calendário] (somente da própria turma)
+                │
+                ▼
+ [Sistema verifica acesso a cada aba / funcionalidade]
+                ├─> [Se tentar acessar outra turma] ──> [Acesso negado / mensagem de erro]
+                │
+                ▼
+        [Professor acessa apenas a própria turma]
+                │
+                ▼
+               [Fim]
